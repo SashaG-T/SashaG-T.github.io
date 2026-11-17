@@ -2,206 +2,375 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sasha Gervais-Tourangeau | Game Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasha Gervais-Tourangeau | XR &amp; Unity Developer Portfolio (VR / AR / Quest)</title>
+  <meta name="description" content="Portfolio of Sasha Gervais-Tourangeau, a Winnipeg-based Unity developer and technical director specializing in VR/AR/XR, gameplay programming, multiplayer VR, shaders and shipped mobile and web games." />
+  <meta name="keywords" content="XR developer, VR developer, AR developer, Unity developer, C#, Meta Quest, multiplayer VR, shader development, gameplay programmer, technical director, Winnipeg, Canada" />
+  <meta name="author" content="Sasha Gervais-Tourangeau" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Sasha Gervais-Tourangeau | XR &amp; Unity Developer" />
+  <meta property="og:description" content="VR/AR/XR, Unity gameplay programming and technical direction. Shipped VR, mobile, web and Steam titles." />
+
+  <!-- Machine-readable profile and project list for search engines and AI agents -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "#sasha",
+        "name": "Sasha Gervais-Tourangeau",
+        "jobTitle": "XR / Unity Developer, Gameplay Programmer, Technical Director",
+        "address": { "@type": "PostalAddress", "addressLocality": "Winnipeg", "addressRegion": "MB", "addressCountry": "CA" },
+        "email": "mailto:sasha.gervaistourangeau@gmail.com",
+        "sameAs": ["https://github.com/SashaG-T", "https://www.linkedin.com/in/sashagt/"],
+        "knowsAbout": ["Virtual reality", "Augmented reality", "Extended reality (XR)", "Unity", "C#", "Meta Quest 2/3", "Multiplayer networking", "Shader development", "VR interaction systems", "Save system architecture", "Mobile game development (iOS/Android)", "HTML5 web games", "C", "C++", "SDL", "Lua", "Technical direction"]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Projects",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "VideoGame", "name": "The Last Taxi (VR)", "url": "https://store.steampowered.com/app/398990/", "keywords": "VR, narrative, interaction systems, save system", "description": "CMF-funded narrative VR game. Worked on interaction systems and save file architecture.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "VideoGame", "name": "Stalled (Quest 2/3)", "url": "https://zenfri.ca/stalled/", "keywords": "VR, Meta Quest 2, Meta Quest 3, multiplayer, networking, shaders, standalone headset", "description": "Multiplayer VR project with advanced shader work and custom networking systems.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareApplication", "name": "Three Sisters VR", "url": "https://zenfri.ca/chiefswood-park-vr/", "keywords": "VR, tourism, location-based, client project", "description": "Single-player tourism VR application created for Six Nations of the Grand River, deployed on location.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "VideoGame", "name": "Princess Auto Game (Mobile)", "url": "https://zenfri.ca/powerfist/", "keywords": "mobile, iOS, Android, location-based, idle clicker, microtransactions, lead developer", "description": "Led development of a location-based idle clicker shipped on iOS and Android.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "Unity–ChatGPT Integration", "keywords": "Unity, C#, plugin, native DLL, external API, LLM", "description": "Led plugin development bridging Unity with external APIs using custom DLLs.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "VideoGame", "name": "Pack n' Paddle (CBC Kids)", "url": "https://www.cbc.ca/kids/games/play/pack-n-paddle", "keywords": "web game, HTML5, custom web engine, sole programmer, lead developer", "description": "Led development from concept and pitch through custom web engine to final delivery as sole programmer.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 7, "item": { "@type": "VideoGame", "name": "Turtle Island Skate Jam (CBC Kids)", "url": "https://www.cbc.ca/kids/games/play/turtle-island-skate-jam", "keywords": "web game, gameplay systems, optimization tools, sole programmer", "description": "Led development; built gameplay systems and optimization tools as sole programmer.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 8, "item": { "@type": "VideoGame", "name": "Turtle Island Skate Jam 2 — Shred the Gnar (CBC Kids)", "url": "https://www.cbc.ca/kids/games/play/turtle-island-skate-jam-2", "keywords": "web game, gameplay systems, tools, sole programmer", "description": "Led development on the sequel; added gameplay systems and tools as sole programmer.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 9, "item": { "@type": "VideoGame", "name": "Melody Quest: Battle Beats", "url": "https://zenfri.itch.io/melody-quest-battle-beats", "keywords": "game jam, lead programmer, WINNITRON, arcade", "description": "Internal game-jam title; lead programmer on a team of four.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 10, "item": { "@type": "VideoGame", "name": "Mya and their Cat", "url": "https://store.steampowered.com/app/2871640/", "keywords": "C, SDL, Lua tooling, Tiled, Steam", "description": "Game written in C with SDL, with Lua production tooling for editing and testing levels in Tiled.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 11, "item": { "@type": "SoftwareSourceCode", "name": "CMidi", "codeRepository": "https://github.com/SashaG-T/CMidi", "programmingLanguage": "C", "keywords": "MIDI, audio synthesis, header-only library", "description": "Real-time software MIDI synthesizer, single-header C library.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 12, "item": { "@type": "SoftwareSourceCode", "name": "chash", "codeRepository": "https://github.com/SashaG-T/chash", "programmingLanguage": "C", "keywords": "hash table, header-only library, generic", "description": "Single-header generic hash table in C.", "author": { "@id": "#sasha" } } },
+          { "@type": "ListItem", "position": 13, "item": { "@type": "VideoGame", "name": "Generic Jumper", "url": "https://store.steampowered.com/app/853000/", "keywords": "C++, SDL2, custom 2D engine, Steam", "description": "Custom 2D engine in C++/SDL2 and a game built with it, published on Steam.", "author": { "@id": "#sasha" } } }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #fff;
+      --ink: #1f2328;
+      --muted: #5c6370;
+      --line: #e3e6ea;
+      --accent: #0a5bd3;
+      --xr: #6b3fd4;
+      --xr-soft: #f1ecfd;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
-      color: #333;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
       line-height: 1.6;
     }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
 
-    header {
-      background: #222;
+    header.site {
+      background: #16181d;
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 2rem;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    header.site h1 { margin: 0; font-size: 2rem; }
+    header.site .roles { margin: .4rem 0 0; color: #b9bec8; font-size: 1.05rem; }
+    header.site .focus {
+      display: inline-block; margin-top: 1rem; padding: .3rem .8rem;
+      border: 1px solid #8f73e8; border-radius: 999px; color: #d9cffb; font-size: .9rem;
     }
+    header.site nav { margin-top: 1rem; font-size: .95rem; }
+    header.site nav a { color: #9fc3ff; margin: 0 .5rem; }
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      color: #aaa;
-    }
+    main { max-width: 860px; margin: 2rem auto; padding: 0 1rem; }
+    section { margin-bottom: 3rem; }
+    h2 { border-bottom: 2px solid var(--line); padding-bottom: .3rem; margin-top: 0; }
 
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem; padding: 0; list-style: none; }
+    .skills li { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: .75rem 1rem; }
+    .skills strong { display: block; }
+    .skills span { color: var(--muted); font-size: .92rem; }
 
-    section {
-      margin-bottom: 3rem;
+    .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .75rem; }
+    .highlights a {
+      display: block; background: var(--xr-soft); border: 1px solid #ddd2fa; border-radius: 8px;
+      padding: .8rem 1rem; color: var(--ink);
     }
+    .highlights a:hover { text-decoration: none; border-color: var(--xr); }
+    .highlights b { color: var(--xr); }
+    .highlights small { display: block; color: var(--muted); }
 
-    h2 {
-      color: #444;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
+    .filters { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.5rem; }
+    .filters button {
+      font: inherit; font-size: .9rem; cursor: pointer;
+      padding: .35rem .85rem; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--card); color: var(--ink);
     }
+    .filters button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .filters button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-    .project {
-      margin-bottom: 1.5rem;
-    }
+    .group-title { font-size: 1.1rem; color: var(--muted); margin: 2rem 0 .75rem; border: 0; padding: 0; }
+    .group-title:first-of-type { margin-top: 0; }
 
-    .project h3 {
-      margin: 0;
-      font-size: 1.2rem;
+    article.project {
+      background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+      padding: 1rem 1.2rem; margin-bottom: 1rem;
     }
+    article.project.xr { border-left: 4px solid var(--xr); }
+    article.project h3 { margin: 0 0 .25rem; font-size: 1.2rem; }
+    .meta { color: var(--muted); font-size: .92rem; margin: 0 0 .5rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .5rem 0; padding: 0; list-style: none; }
+    .tags li { font-size: .78rem; padding: .1rem .55rem; border-radius: 999px; background: #eef1f5; color: #3b4250; }
+    .tags li.xr { background: var(--xr-soft); color: var(--xr); font-weight: 600; }
+    article.project p { margin: .35rem 0; }
+    .links { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+    .embed { margin-top: .75rem; max-width: 646px; }
+    .embed iframe { width: 100%; height: 190px; border: 0; }
 
-    .project p {
-      margin: 0.3rem 0;
-    }
+    [hidden] { display: none !important; }
+    .empty { color: var(--muted); font-style: italic; }
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    a {
-      color: #0055aa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    footer { text-align: center; padding: 2rem 1rem; font-size: .9rem; color: #888; }
   </style>
 </head>
 <body>
 
-  <header>
+  <header class="site">
     <h1>Sasha Gervais-Tourangeau</h1>
-    <p>Gameplay Programmer • Unity Developer • Technical Director</p>
+    <p class="roles">XR / Unity Developer • Gameplay Programmer • Technical Director</p>
+    <p class="focus">Focus: VR · AR · XR in Unity &amp; C#</p>
+    <nav aria-label="Page sections">
+      <a href="#about">About</a>
+      <a href="#xr-highlights">XR highlights</a>
+      <a href="#projects">All projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <div class="container">
+  <main>
 
-    <section>
-      <h2>About Me</h2>
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About Me</h2>
       <p>
-        I'm a non-binary indigenous game developer based in Winnipeg, MB, Canada.
+        I'm a non-binary Indigenous game developer based in Winnipeg, MB, Canada.
         I specialize in Unity, with a focus on gameplay programming, VR/AR/XR, and technical direction.
-        I’m passionate about creating emotionally rich and mechanically engaging experiences.
+        I've shipped VR titles, multiplayer Quest projects, mobile apps and web games, often as lead or sole programmer,
+        and I own features from concept and pitch through to final delivery.
+        I'm passionate about creating emotionally rich and mechanically engaging experiences.
       </p>
+
+      <ul class="skills" aria-label="Skills at a glance">
+        <li><strong>XR</strong><span>VR interaction systems, Meta Quest 2/3, multiplayer VR, location-based VR</span></li>
+        <li><strong>Unity &amp; C#</strong><span>Gameplay systems, save architecture, tooling, native DLL plugins</span></li>
+        <li><strong>Graphics &amp; performance</strong><span>Shader work, optimization tools, standalone headsets</span></li>
+        <li><strong>Platforms</strong><span>Quest, PC VR, iOS/Android, HTML5 web, Steam</span></li>
+        <li><strong>Leadership</strong><span>Technical direction, lead/sole programmer, concept-to-delivery ownership</span></li>
+        <li><strong>Low-level</strong><span>C, C++, SDL, Lua tooling, custom engines</span></li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Selected Projects</h2>
-
-      <div class="zf">
-        <h2>ZenFri Inc</h2>
-        <p>Here's a selection of notable projects I worked on while at <a href="https://zenfri.ca/">ZenFri</a>.</p>
-        <div class="project">
-          <h3>The Last Taxi (VR)</h3>
-          <p>CMF-funded narrative VR game. I worked on interaction systems and the save file architecture.</p>
-          <iframe src="https://store.steampowered.com/widget/398990/" frameborder="0" width="646" height="190"></iframe>
-        </div>
-
-        <div class="project">
-          <h3>Pack n' Paddle (CBC Kids)</h3>
-          <p>Led development from concept, pitch, web engine creation, task creation, all the way to final delivery. I was the sole programmer.</p>
-          <a href="https://www.cbc.ca/kids/games/play/pack-n-paddle">Play it Here</a><br/>
-          <a href="https://zenfri.ca/pack-n-paddle/">See the sizzle reel.</a>
-        </div>
-
-        <div class="project">
-          <h3>Turtle Island Skate Jam (CBC Kids)</h3>
-          <p>Led development on CBC Kids' favourite of their line up. Built gameplay systems and optimization tools. I was the sole programmer.</p>
-          <a href="https://www.cbc.ca/kids/games/play/turtle-island-skate-jam">Play it Here</a><br/>
-          <a href="https://zenfri.ca/turtle-island/">See the sizzle reel.</a>
-        </div>
-
-        <div class="project">
-          <h3>Turtle Island Skate Jam 2 — Shread the Gnar (CBC Kids)</h3>
-          <p>Led development on a reboot of Turtle Island Skate Jam. Added more gameplay systems and tools, again as the sole programmer.</p>
-          <a href="https://www.cbc.ca/kids/games/play/turtle-island-skate-jam-2">Play it Here</a><br/>
-          <a href="https://zenfri.ca/turtle-island/">See the sizzle reel.</a>
-        </div>
-
-        <div class="project">
-          <h3>Princess Auto Game (Mobile)</h3>
-          <p>Led development. Location-based idle clicker with microtransactions. Live for a limited time on iOS/Android. It is no longer available for download.</p>
-          <a href="https://zenfri.ca/powerfist/">See the demo reel here.</a>
-        </div>
-
-        <div class="project">
-          <h3>Stalled (Quest 2/3)</h3>
-          <p>Multiplayer VR project with advanced shader work and custom networking systems. There's very little public material available but...</p>
-          <a href="https://zenfri.ca/stalled/">See what's public here.</a>
-        </div>
-
-        <div class="project">
-          <h3>Three Sisters VR</h3>
-          <p>Single player tourism VR application created for Six Nations of the Grand River. It's on location only.</p>
-          <a href="https://zenfri.ca/chiefswood-park-vr/">See the sizzle reel here.</a>
-        </div>
-
-        <div class="project">
-          <h3>Unity–ChatGPT Integration</h3>
-          <p>Led plugin development to bridge Unity with external APIs using custom DLLs. Limited public information available.</p>
-        </div>
-
-        <div class="project">
-          <h3>Melody Quest: Battle Beats</h3>
-          <p>An game created during an internal game jam week at ZenFri. A team of 4 (Artist, Lead Programmer (Me), and 2 Generalist Programmers)</p>
-          <p>The game is <a href="http://winnitron.com/">WINNITRON</a> compatible.</p>
-          <a href="https://zenfri.itch.io/melody-quest-battle-beats">Play it here.</a>
-          (Password: bard)
-        </div>
-      </div>
-
-      <div class="me">
-        <h2>Personal</h2>
-        <p>Here's a small selection of things I did for fun.</p>
-        <div class="project">
-          <h3>Mya and their Cat</h3>
-          <p>A game written in C using SDL. That's it. It uses <a href="https://github.com/SashaG-T/CMidi">CMidi</a> and it has production tooling written in Lua so that levels can be editted, complied, and tested, directly in <a href="https://www.mapeditor.org/">Tiled</a></p>
-          <iframe src="https://store.steampowered.com/widget/2871640/" frameborder="0" width="646" height="190"></iframe>
-        </div>
-
-        <div class="project">
-          <h3>CMidi</h3>
-          <p>A software based real-time MIDI syhtnesizing header library written in C.</p>
-          <p>If you have a C complier you can test it out by creating RIFF_WAV files here: <a href="https://github.com/SashaG-T/CMidi">Use CMidi</a></p>
-        </div>
-
-        <div class="project">
-          <h3>chash</h3>
-          <p>A single C header implementation of a generic hash table. Originally created for use in CMidi.</p>
-          <a href="https://github.com/SashaG-T/chash">Read the README.md</a>
-        </div>
-
-        <div class="project">
-          <h3>Generic Jumper</h3>
-          <p>Created a 2D Game Engine written in C++ and SDL2. Created a game with the engine and published to Steam. An older piece in my portfolio but this still demonstrates of my ability to plan, execute, and deliver a product.</p>
-          <iframe src="https://store.steampowered.com/widget/853000/" frameborder="0" width="646" height="190"></iframe>
-        </div>
-
+    <section id="xr-highlights" aria-labelledby="xr-h">
+      <h2 id="xr-h">XR Highlights</h2>
+      <div class="highlights">
+        <a href="#stalled"><b>Stalled</b><small>Multiplayer VR on Quest 2/3: custom networking and advanced shaders</small></a>
+        <a href="#the-last-taxi"><b>The Last Taxi</b><small>Narrative VR on Steam: interaction systems and save architecture</small></a>
+        <a href="#three-sisters-vr"><b>Three Sisters VR</b><small>On-location tourism VR for Six Nations of the Grand River</small></a>
       </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="xr" aria-pressed="false">VR / AR / XR</button>
+        <button type="button" data-filter="unity" aria-pressed="false">Unity / C#</button>
+        <button type="button" data-filter="multiplayer" aria-pressed="false">Multiplayer &amp; networking</button>
+        <button type="button" data-filter="graphics" aria-pressed="false">Shaders &amp; optimization</button>
+        <button type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+        <button type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button type="button" data-filter="lead" aria-pressed="false">Lead / sole programmer</button>
+        <button type="button" data-filter="c" aria-pressed="false">C / C++</button>
+      </div>
+      <p class="empty" id="no-results" hidden>No projects match this filter.</p>
+
+      <!-- ===== Professional work ===== -->
+      <h3 class="group-title" data-group="pro">Professional work at <a href="https://zenfri.ca/">ZenFri Inc.</a></h3>
+
+      <article class="project xr" id="stalled" data-tags="xr multiplayer graphics">
+        <h3>Stalled</h3>
+        <p class="meta">Meta Quest 2/3 · Multiplayer VR · ZenFri</p>
+        <ul class="tags"><li class="xr">VR</li><li>Quest 2/3</li><li>Standalone headset</li><li>Multiplayer</li><li>Custom networking</li><li>Shaders</li></ul>
+        <p>Multiplayer VR project with advanced shader work and custom networking systems, targeting standalone Quest headsets.</p>
+        <p>There's very little public material available, but some is linked below.</p>
+        <div class="links"><a href="https://zenfri.ca/stalled/">See what's public</a></div>
+      </article>
+
+      <article class="project xr" id="the-last-taxi" data-tags="xr">
+        <h3>The Last Taxi</h3>
+        <p class="meta">VR · Narrative · Steam · CMF-funded · ZenFri</p>
+        <ul class="tags"><li class="xr">VR</li><li>Interaction systems</li><li>Save system architecture</li><li>Shipped on Steam</li></ul>
+        <p>CMF-funded narrative VR game. I worked on the VR interaction systems and the save file architecture.</p>
+        <div class="embed"><iframe src="https://store.steampowered.com/widget/398990/" title="The Last Taxi on Steam" loading="lazy"></iframe></div>
+      </article>
+
+      <article class="project xr" id="three-sisters-vr" data-tags="xr">
+        <h3>Three Sisters VR</h3>
+        <p class="meta">VR · Tourism · Location-based · Client: Six Nations of the Grand River</p>
+        <ul class="tags"><li class="xr">VR</li><li>Location-based install</li><li>Client project</li></ul>
+        <p>Single-player tourism VR application created for Six Nations of the Grand River, deployed on location at Chiefswood Park.</p>
+        <div class="links"><a href="https://zenfri.ca/chiefswood-park-vr/">See the sizzle reel</a></div>
+      </article>
+
+      <article class="project" id="princess-auto" data-tags="mobile lead">
+        <h3>Princess Auto Game</h3>
+        <p class="meta">iOS &amp; Android · Location-based · Lead developer</p>
+        <ul class="tags"><li>Mobile</li><li>iOS</li><li>Android</li><li>Location-based</li><li>Microtransactions</li><li>Lead developer</li></ul>
+        <p>Led development of a location-based idle clicker with microtransactions, shipped to the App Store and Google Play for a limited-time campaign. It's no longer available for download.</p>
+        <div class="links"><a href="https://zenfri.ca/powerfist/">See the demo reel</a></div>
+      </article>
+
+      <article class="project" id="unity-chatgpt" data-tags="unity lead">
+        <h3>Unity–ChatGPT Integration</h3>
+        <p class="meta">Unity plugin · C# · Native DLLs · Lead developer</p>
+        <ul class="tags"><li>Unity</li><li>C#</li><li>Native plugins / DLLs</li><li>External API integration</li><li>Lead developer</li></ul>
+        <p>Led plugin development to bridge Unity with external APIs using custom DLLs. Limited public information is available.</p>
+      </article>
+
+      <article class="project" id="pack-n-paddle" data-tags="web lead">
+        <h3>Pack n' Paddle</h3>
+        <p class="meta">CBC Kids · Web game · Sole programmer</p>
+        <ul class="tags"><li>Web / HTML5</li><li>Custom web engine</li><li>Sole programmer</li><li>Concept to delivery</li></ul>
+        <p>Led development from concept and pitch through web engine creation and task planning, all the way to final delivery. I was the sole programmer.</p>
+        <div class="links">
+          <a href="https://www.cbc.ca/kids/games/play/pack-n-paddle">Play it</a>
+          <a href="https://zenfri.ca/pack-n-paddle/">See the sizzle reel</a>
+        </div>
+      </article>
+
+      <article class="project" id="turtle-island-skate-jam" data-tags="web lead graphics">
+        <h3>Turtle Island Skate Jam</h3>
+        <p class="meta">CBC Kids · Web game · Sole programmer</p>
+        <ul class="tags"><li>Web</li><li>Gameplay systems</li><li>Optimization tools</li><li>Sole programmer</li></ul>
+        <p>Led development on CBC Kids' favourite of their lineup. Built the gameplay systems and optimization tools. I was the sole programmer.</p>
+        <div class="links">
+          <a href="https://www.cbc.ca/kids/games/play/turtle-island-skate-jam">Play it</a>
+          <a href="https://zenfri.ca/turtle-island/">See the sizzle reel</a>
+        </div>
+      </article>
+
+      <article class="project" id="turtle-island-skate-jam-2" data-tags="web lead">
+        <h3>Turtle Island Skate Jam 2: Shred the Gnar</h3>
+        <p class="meta">CBC Kids · Web game · Sole programmer</p>
+        <ul class="tags"><li>Web</li><li>Gameplay systems</li><li>Tools</li><li>Sole programmer</li></ul>
+        <p>Led development on a reboot of Turtle Island Skate Jam, adding more gameplay systems and tools, again as the sole programmer.</p>
+        <div class="links">
+          <a href="https://www.cbc.ca/kids/games/play/turtle-island-skate-jam-2">Play it</a>
+          <a href="https://zenfri.ca/turtle-island/">See the sizzle reel</a>
+        </div>
+      </article>
+
+      <article class="project" id="melody-quest" data-tags="lead">
+        <h3>Melody Quest: Battle Beats</h3>
+        <p class="meta">Internal game jam · Lead programmer · Team of 4</p>
+        <ul class="tags"><li>Game jam</li><li>Lead programmer</li><li>Arcade (WINNITRON)</li></ul>
+        <p>A game made during an internal game jam week at ZenFri by a team of four: an artist, me as lead programmer, and two generalist programmers. It's <a href="http://winnitron.com/">WINNITRON</a> compatible.</p>
+        <div class="links"><a href="https://zenfri.itch.io/melody-quest-battle-beats">Play it on itch.io</a> <span>(password: bard)</span></div>
+      </article>
+
+      <!-- ===== Personal work ===== -->
+      <h3 class="group-title" data-group="personal">Personal projects</h3>
+
+      <article class="project" id="mya-and-their-cat" data-tags="c lead">
+        <h3>Mya and their Cat</h3>
+        <p class="meta">C · SDL · Lua tooling · Steam</p>
+        <ul class="tags"><li>C</li><li>SDL</li><li>Lua</li><li>Tiled pipeline</li><li>Shipped on Steam</li></ul>
+        <p>A game written in C using SDL and <a href="https://github.com/SashaG-T/CMidi">CMidi</a>. Its production tooling is written in Lua, so levels can be edited, compiled and tested directly in <a href="https://www.mapeditor.org/">Tiled</a>.</p>
+        <div class="embed"><iframe src="https://store.steampowered.com/widget/2871640/" title="Mya and their Cat on Steam" loading="lazy"></iframe></div>
+      </article>
+
+      <article class="project" id="cmidi" data-tags="c">
+        <h3>CMidi</h3>
+        <p class="meta">C · Header-only library · Audio</p>
+        <ul class="tags"><li>C</li><li>Real-time audio</li><li>MIDI synthesis</li><li>Open source</li></ul>
+        <p>A software-based, real-time MIDI synthesizer, written as a header-only C library. If you have a C compiler you can try it out by generating RIFF WAV files.</p>
+        <div class="links"><a href="https://github.com/SashaG-T/CMidi">CMidi on GitHub</a></div>
+      </article>
+
+      <article class="project" id="chash" data-tags="c">
+        <h3>chash</h3>
+        <p class="meta">C · Header-only library</p>
+        <ul class="tags"><li>C</li><li>Data structures</li><li>Open source</li></ul>
+        <p>A single-header C implementation of a generic hash table, originally created for use in CMidi.</p>
+        <div class="links"><a href="https://github.com/SashaG-T/chash">Read the README</a></div>
+      </article>
+
+      <article class="project" id="generic-jumper" data-tags="c lead">
+        <h3>Generic Jumper</h3>
+        <p class="meta">C++ · SDL2 · Custom engine · Steam</p>
+        <ul class="tags"><li>C++</li><li>SDL2</li><li>Custom 2D engine</li><li>Shipped on Steam</li></ul>
+        <p>A 2D game engine I wrote in C++ and SDL2, plus a game built with it and published to Steam. It's an older piece, but it shows that I can plan, execute and ship a product on my own.</p>
+        <div class="embed"><iframe src="https://store.steampowered.com/widget/853000/" title="Generic Jumper on Steam" loading="lazy"></iframe></div>
+      </article>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
       <p>Email: <a href="mailto:sasha.gervaistourangeau@gmail.com">sasha.gervaistourangeau@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/SashaG-T" target="_blank">GitHub</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/sashagt/" target="_blank">LinkedIn</a></p>
+      <p>GitHub: <a href="https://github.com/SashaG-T" target="_blank" rel="noopener">github.com/SashaG-T</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sashagt/" target="_blank" rel="noopener">linkedin.com/in/sashagt</a></p>
     </section>
 
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 Sasha Gervais-Tourangeau. All rights reserved.
+    &copy; 2026 Sasha Gervais-Tourangeau. All rights reserved.
   </footer>
 
+  <script>
+    // Progressive enhancement: everything is visible without JS.
+    // Supports deep links like index.html?filter=xr
+    (function () {
+      const buttons = document.querySelectorAll('.filters button');
+      const projects = document.querySelectorAll('article.project');
+      const groups = document.querySelectorAll('.group-title');
+      const empty = document.getElementById('no-results');
+
+      function apply(filter) {
+        let shown = 0;
+        projects.forEach(p => {
+          const match = filter === 'all' || p.dataset.tags.split(' ').includes(filter);
+          p.hidden = !match;
+          if (match) shown++;
+        });
+        // Hide a group heading when none of its projects are visible
+        groups.forEach(g => {
+          let el = g.nextElementSibling, any = false;
+          while (el && !el.classList.contains('group-title')) {
+            if (el.matches('article.project') && !el.hidden) any = true;
+            el = el.nextElementSibling;
+          }
+          g.hidden = !any;
+        });
+        empty.hidden = shown > 0;
+        buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
+      }
+
+      buttons.forEach(b => b.addEventListener('click', () => {
+        apply(b.dataset.filter);
+        const url = new URL(location);
+        if (b.dataset.filter === 'all') url.searchParams.delete('filter');
+        else url.searchParams.set('filter', b.dataset.filter);
+        history.replaceState(null, '', url);
+      }));
+
+      const initial = new URLSearchParams(location.search).get('filter');
+      if (initial && document.querySelector('.filters button[data-filter="' + initial + '"]')) apply(initial);
+    })();
+  </script>
 </body>
 </html>
